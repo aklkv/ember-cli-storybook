@@ -54,17 +54,17 @@ function getDocumentValues($, selector, attributes=[], ignoreRegexs=[]) {
 
 function removeRootURL(config) {
   // extract and parse the application config
-  let appConfig = JSON.parse(decodeURIComponent(config.meta[0].content));
-  let { rootURL } = appConfig;
-	if (!rootURL) return config;
-	config.script = config.script.map(s => {
-		s.src = s.src.replace(rootURL, './');
-		return s;
-	});
-	config.link = config.link.map(l => {
-		l.href = l.href.replace(rootURL, './');
-		return l;
-	});
+//   let appConfig = JSON.parse(decodeURIComponent(config.meta[0].content));
+//   let { rootURL } = appConfig;
+// 	if (!rootURL) return config;
+// 	config.script = config.script.map(s => {
+// 		s.src = s.src.replace(rootURL, './');
+// 		return s;
+// 	});
+// 	config.link = config.link.map(l => {
+// 		l.href = l.href.replace(rootURL, './');
+// 		return l;
+// 	});
   return config;
 }
 
